@@ -35,7 +35,9 @@ app.get("/weather", (req, res) => {
     }
     res.send({
       location: weatherDetails.location,
+      weather: weatherDetails.weather,
       currentTemperature: weatherDetails.currTemp,
+      humidity: weatherDetails.humidity,
     });
   });
 });

@@ -1,6 +1,6 @@
 const request = require("request");
 
-const weatherForcast = (city, callback) => {
+const weatherForecast = (city, callback) => {
   const API_KEY = "bbd9078a642543ac98e130131241003";
 
   const url =
@@ -17,16 +17,24 @@ const weatherForcast = (city, callback) => {
       });
     } else {
       const location =
-        response.body.location.name + " , " + response.body.location.region;
+        response.body.location.name +
+        " , " +
+        response.body.location.region +
+        " , " +
+        response.body.location.country;
+      const weather = response.body.current.condition.text;
       const currTemp = response.body.current.temp_c;
+      const humidity = response.body.current.humidity;
 
       const weatherInfo = {
         location,
+        weather,
         currTemp,
+        humidity,
       };
       callback(weatherInfo);
     }
   });
 };
 
-module.exports = weatherForcast;
+module.exports = weatherForecast;
