@@ -1,61 +1,145 @@
-body {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  margin: 1% 0% 0% 20%;
-  font-family: "Times New Roman", Times, serif;
-  min-height: 97vh;
-  color: rgba(226, 220, 220, 0.567);
+/* Reset and base styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.main-content {
-  flex-grow: 1;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 30px;
+  color: #222;
+}
+
+/* Header and title */
+header {
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .title {
-  margin-top: 8px;
-  color: #300789;
+  font-size: 2.5rem;
+  color: #2c3e50;
   font-weight: bold;
   text-decoration: underline;
-  font-size: xx-large;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
-header {
-  margin-bottom: 30px;
-}
-
+/* Navigation links */
 a {
   text-decoration: none;
-  color: #333333;
-  margin: 30px 10px 0px 0px;
-  font-size: x-large;
+  color: #ffffff;
+  background-color: #2980b9;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 10px;
+  font-size: 1.1rem;
+  transition: 0.3s ease-in-out;
 }
 
-h3 {
-  color: cadetblue;
+a:hover {
+  background-color: #3498db;
 }
 
-img {
-  margin-bottom: 0px;
-  width: 300px;
-  height: 400px;
+/* Main content */
+.main-content {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
 }
 
-footer {
-  border-top: 1px solid #ab9a9a;
-  margin-top: 25px;
+/* Label styling for "Please enter" */
+label {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  display: block;
+  color: #34495e;
 }
 
+/* Form styling */
 input {
-  border: 1px solid #cccccc;
-  padding: 8px;
+  width: 70%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  outline: none;
 }
 
 button {
-  cursor: pointer;
-  border: 1px solid#888888;
-  background-color: #888888;
+  padding: 10px 20px;
+  background-color: #27ae60;
   color: white;
-  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #2ecc71;
+}
+
+/* Weather result messages */
+#messageOne,
+#messageTwo,
+#messageThree,
+#messageFour {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #444;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+/* About Page - Image Container */
+.about-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Profile Image Styling */
+.profile-img {
+  width: 140px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Weather Logo Styling */
+.weather-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.2));
+}
+
+.ente-loc {
+  margin-bottom: 15px;
 }

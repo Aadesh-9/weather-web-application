@@ -1,17 +1,28 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="icon" href="./img/icon.webp">
+    <link rel="icon" href="./img/icon.webp" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     {{>header}}
-    <div class="main-content">
-      <p>This site was created by Aadesh Wasamkar . It uses data from weatherapi.com</p> 
+
+    <div class="main-content about-section">
+      <h2>About This App</h2>
+      <p>
+        This weather application was created by <strong>Aadesh Wasamkar</strong> as a part of a web development project. <br />
+        It fetches real-time weather data using the <a href="https://www.weatherapi.com/" target="_blank">WeatherAPI</a>.
+      </p>
+
+      <div class="about-img-container">
+        <img src="./img/My_Picture.jpg" alt="Aadesh Wasamkar" class="profile-img" />
+        <img src="./img/icon.webp" alt="Weather Logo" class="weather-logo" />
+      </div>
     </div>
-    <img src="./img/Aadesh33.jpg" />
+
     {{>footer}}
   </body>
 </html>
